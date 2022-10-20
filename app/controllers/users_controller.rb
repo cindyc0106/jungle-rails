@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/"
     else
-      redirect_to "/create"
+      redirect_to '/login'
     end
   end
 
@@ -17,5 +17,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
-  
+
 end
