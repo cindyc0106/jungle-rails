@@ -4,6 +4,15 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_user
+
+  def authorize
+    redirect_to '/login' unless current_user
+  end
+
   private
 
   def cart
@@ -30,3 +39,7 @@ class ApplicationController < ActionController::Base
     cookies[:cart]
   end
 end
+
+# Add a before_filter to any controller that you want to secure. This will force user's to login before they can see the actions in this controller
+# # before_filter :authorize
+# before_action
