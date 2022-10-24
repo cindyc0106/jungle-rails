@@ -62,10 +62,24 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be(nil)
     end
 
+    it "does not save successfully if any field is not authenticated" do
+      user = User.new(first_name: "cindy", last_name: "chen", email:"test@test.com", password: "123456", password_confirmation: "123456")
+      user.save
+      @user = User.authenticate_with_credentials("example.@est.com", "123456")
+      expect(@user).to be(nil)
+    end
+
     it "saves successfully with spaces in email" do
       user = User.new(first_name: "cindy", last_name: "chen", email:"test@test.com", password: "123456", password_confirmation: "123456")
       user.save
       @user = User.authenticate_with_credentials("   test@test.com   ", "123456")
+      expect(@user).not_to be(nil)
+    end
+
+    it "saves successfully with wrong cases for email" do
+      user = User.new(first_name: "cindy", last_name: "chen", email:"test@test.com", password: "123456", password_confirmation: "123456")
+      user.save
+      @user = User.authenticate_with_credentials("TEsT@tEsT.com", "123456")
       expect(@user).not_to be(nil)
     end
 
