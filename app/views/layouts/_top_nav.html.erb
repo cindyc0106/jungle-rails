@@ -44,7 +44,7 @@
         </li> %>
       </ul>
       <a><% if current_user %>
-      Signed in as <%=  current_user.name %> | <%= link_to "Logout", '/logout', style:"color:white;" %>
+      Signed in as <%=  current_user.first_name %> | <%= link_to "Logout", '/logout', style:"color:white;" %>
     <% else %>
       <%= link_to 'Login', '/login', style:"color:white;" %> | <%= link_to 'Signup', '/signup', style:"color:white;" %>
     <% end %>
