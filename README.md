@@ -1,6 +1,7 @@
 # Jungle
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+Users are able to Sign Up/Log In (not required), shop for products, and place orders. There is an Admin Dashboard(authentication) that Admin Users can add/delete products and categories.
 
 ## Setup
 
@@ -13,15 +14,19 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
-## Database
-
-If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
-
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
+## Screenshots
+
+
+## Database
+
+If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
+
 
 ## Dependencies
 
