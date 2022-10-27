@@ -22,6 +22,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshots
 
+!["Home Page"](https://github.com/cindyc0106/jungle-rails/blob/master/docs/home.png?raw=true)
+!["Product Details Page"](https://github.com/cindyc0106/jungle-rails/blob/master/docs/product%20details.png?raw=true)
+!["Payment in Cart"](https://github.com/cindyc0106/jungle-rails/blob/master/docs/payment.png?raw=true)
+!["After Order Page"](https://github.com/cindyc0106/jungle-rails/blob/master/docs/order%20received.png?raw=true)
 
 ## Database
 
